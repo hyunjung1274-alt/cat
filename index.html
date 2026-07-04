@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>고양이 클릭 게임</title>
+    <style>
+        body { text-align: center; font-family: sans-serif; padding-top: 50px; }
+        #cat { font-size: 100px; cursor: pointer; transition: transform 0.1s; }
+        #cat:active { transform: scale(0.9); }
+    </style>
+</head>
+<body>
+
+    <h1>고양이 클릭커!</h1>
+    <div id="cat">🐱</div>
+    <h2 id="score">점수: 0</h2>
+
+    <script>
+        let score = 0;
+        const cat = document.getElementById('cat');
+        const scoreDisplay = document.getElementById('score');
+
+        cat.addEventListener('click', () => {
+            score++;
+            scoreDisplay.innerText = '점수: ' + score;
+        });
+    </script>
+</body>
+</html>
